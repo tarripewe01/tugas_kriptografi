@@ -1,0 +1,7 @@
+{
+  "name": "tugas_kriptografi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

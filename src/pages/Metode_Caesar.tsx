@@ -92,11 +92,12 @@ const MetodeCaesar: React.FC = () => {
               onIonChange={(e) => setText(e.detail.value!)}
               placeholder="Ketik teks di sini..."
               rows={3}
+              style={{ paddingTop: 25 }}
             />
           </IonItem>
         </IonCol>
 
-        <IonCol size="12" size-md="6">
+        {/* <IonCol size="12" size-md="6">
           <IonItem>
             <IonLabel>Gunakan Key</IonLabel>
             <IonCheckbox
@@ -108,12 +109,13 @@ const MetodeCaesar: React.FC = () => {
               }}
             />
           </IonItem>
-        </IonCol>
+        </IonCol> */}
 
+        {/* Input Kunci hanya muncul jika useKey = true */}
         {useKey && (
-          <IonCol size="12" size-md="6">
+          <IonCol size="12" size-md="12">
             <IonItem>
-              <IonLabel position="floating">Shift</IonLabel>
+              <IonLabel position="floating">Kunci</IonLabel>
               <IonInput
                 type="number"
                 value={shift}
@@ -125,6 +127,7 @@ const MetodeCaesar: React.FC = () => {
           </IonCol>
         )}
 
+        {/* Tombol selalu dalam satu baris */}
         <IonCol size="6">
           <IonButton
             expand="block"

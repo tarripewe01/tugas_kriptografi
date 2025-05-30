@@ -13,7 +13,7 @@ import {
   IonIcon,
   IonLabel,
 } from "@ionic/react";
-import { lockClosed, lockOpen, options, list } from "ionicons/icons";
+import { lockClosed, lockOpen, options, list, menu } from "ionicons/icons";
 
 interface SidebarMenuProps {
   onSelectMenu: (menu: string) => void;
@@ -24,7 +24,9 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onSelectMenu }) => {
     <IonMenu contentId="main-content">
       <IonHeader>
         <IonToolbar color="primary">
-          <IonTitle>🔐 Menu</IonTitle>
+          <IonTitle>
+            <IonIcon icon={menu} />
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -45,7 +47,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onSelectMenu }) => {
             </IonItem>
           </IonMenuToggle>
 
-          <IonMenuToggle autoHide={false}>
+          {/* <IonMenuToggle autoHide={false}>
             <IonItem button onClick={() => onSelectMenu("transposisi")}>
               <IonIcon icon={list} slot="start" />
               <IonLabel>Transposisi Vertikal & Horizontal</IonLabel>
@@ -57,7 +59,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onSelectMenu }) => {
               <IonIcon icon={lockOpen} slot="start" />
               <IonLabel>Metode Jejak</IonLabel>
             </IonItem>
-          </IonMenuToggle>
+          </IonMenuToggle> */}
         </IonList>
       </IonContent>
     </IonMenu>

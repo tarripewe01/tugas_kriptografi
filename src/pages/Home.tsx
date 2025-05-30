@@ -36,6 +36,7 @@ import {
 } from "../utils/ciphers";
 import SidebarMenu from "../components/SidebarMenu";
 import MetodeCaesar from "./Metode_Caesar";
+import Penjelasan from "./Penjelasan";
 
 const Home: React.FC = () => {
   const [selectedMenu, setSelectedMenu] = useState<string>('penjelasan');
@@ -51,16 +52,16 @@ const Home: React.FC = () => {
   const renderContent = () => {
     switch (selectedMenu) {
       case 'penjelasan':
-        return <p>🔍 Aplikasi ini menyediakan berbagai metode enkripsi dan dekripsi, termasuk Caesar Cipher, Jejak Cipher, serta Transposisi Vertikal & Horizontal.</p>;
+        return <Penjelasan/>;
 
       case 'caesar':
         return <MetodeCaesar />;
 
-      case 'jejak':
-        return <p>🧬 <strong>Jejak Cipher</strong> adalah metode khusus yang mengikuti pola tertentu dalam menyusun ulang karakter pada teks.</p>;
+      // case 'jejak':
+      //   return <p>🧬 <strong>Jejak Cipher</strong> adalah metode khusus yang mengikuti pola tertentu dalam menyusun ulang karakter pada teks.</p>;
 
-      case 'transposisi':
-        return <p>🔄 <strong>Transposisi Vertikal & Horizontal</strong> adalah metode yang mengubah posisi karakter berdasarkan baris dan kolom, seperti grid. Ini menata ulang huruf tapi tidak mengubahnya.</p>;
+      // case 'transposisi':
+      //   return <p>🔄 <strong>Transposisi Vertikal & Horizontal</strong> adalah metode yang mengubah posisi karakter berdasarkan baris dan kolom, seperti grid. Ini menata ulang huruf tapi tidak mengubahnya.</p>;
 
       default:
         return <p>Pilih menu dari sidebar.</p>;
